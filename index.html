@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MULTIEVENTOSLIMA</title>
+  <meta name="author" content="MULTIEVENTOSLIMA">
+  <meta name="description" content="MULTIEVENTOSLIMA">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+
+  <style>
+    /* Logo sin deformarse */
+    .logo img {
+      max-height: 70px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    /* Altura exacta del buscador */
+    .search-38 {
+    height: 38px;  
+    }
+
+    .form-control{
+    border: none;
+    }
+
+    .input-group{
+    border: 1px solid Silver;
+    border-radius: 6px;
+    }
+
+    .form-control:focus,
+    .btn:focus {
+      outline: none !important; /* Elimina el borde azul o contorno por defecto */
+      box-shadow: none !important; /* Elimina la sombra de foco de Bootstrap */
+    }
+
+    .btn,
+    .btn:focus,
+    .btn:active {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+  }
+
+    /* Teléfono estable */
+    .phone-number {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #000;
+      white-space: nowrap;
+      line-height: 1;
+    }
+
+    .navbar-custom {
+    background-color: #a32e2e;
+  }
+
+  .navbar-custom .nav-link,
+  .navbar-custom .dropdown-item {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 6px 20px;
+    margin: 0 10px; /* separación */
+  }
+
+  .navbar-custom .nav-link:hover,
+  .navbar-custom .dropdown-item:hover {
+    background-color: rgba(255,255,255,0.15);
+    color: #fff;
+  }
+
+  .dropdown-menu {
+    background-color: #a32e2e;
+    border: none;
+  }
+
+/* ===== WHATSAPP JUNTO A LA LUPA EN MÓVIL ===== */
+@media (max-width: 767px){
+
+  /* Ocultar número */
+  .phone-number{
+    display:none;
+  }
+
+  /* Tamaño correcto del icono */
+  .whatsapp-icon{
+    font-size:1.8rem;
+  }
+
+}
+
+
+  /* SUBMENÚ AL PASAR EL MOUSE (DESKTOP) */
+  @media (min-width: 992px) {
+    .navbar .dropdown:hover > .dropdown-menu {
+      display: block;
+    }
+  }
+
+  /* BOTÓN HAMBURGUESA */
+  .navbar-toggler {
+    border-color: rgba(255,255,255,.7);
+  }
+
+  .navbar-toggler-icon {
+    filter: invert(1);
+  }
+
+  .navbar-toggler:focus {
+  outline: none; /*Elimina el contorno/punteado predeterminado*/
+  box-shadow: none; /*Elimina cualquier posible sombra de cuadro*/
+}
+
+
+/* ===== BUSCADOR DESPLEGABLE MOBILE ===== */
+
+/* Mobile: solo icono */
+@media (max-width: 767px){
+  .search-box{
+    max-width:38px !important;
+  }
+
+  .search-input{
+    display:none;
+  }
+
+  .search-box.active{
+    max-width:270px !important;
+  }
+
+  .search-box.active .search-input{
+    display:block;
+  }
+}
+
+/* WhatsApp móvil con mismo contorno del buscador */
+.whatsapp-mobile{
+  width:38px;
+  border:1px solid silver;
+  border-radius:6px;
+}
+
+.whatsapp-mobile .btn{
+  padding:0;
+}
+
+.whatsapp-mobile .bi-whatsapp{
+  font-size:1.4rem;
+}
+
+/* Slider */
+.carousel-item img{
+  height: 420px;
+  object-fit: cover;
+}
+
+@media (max-width: 767px){
+  .carousel-item img{
+    height: 240px;
+  }
+}
+
+/*Titulo y texto del Slider*/
+.carousel-caption h5,
+.carousel-caption p {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+  </style>
+
+</head>
+
+
+<body>
+
+<header class="py-4">
+  <div class="container">
+    <div class="row align-items-center text-center g-4">
+
+      <!-- LOGO -->
+      <div class="col-12 col-md-3 logo">
+        <img src="Logo_multieventos.png" alt="Logo" class="img-fluid mx-auto d-block">
+      </div>
+
+<!-- BUSCADOR + WHATSAPP (mobile juntos) -->
+<div class="col-12 col-md-6 d-flex justify-content-center">
+  <div class="d-flex align-items-center gap-2">
+
+    <!-- BUSCADOR -->
+    <form class="input-group search-box" style="max-width:270px;" id="searchBox">
+      <input type="text"
+             class="form-control search-input search-38"
+             placeholder="Buscar..."
+             id="searchInput">
+
+      <button type="button"
+              class="btn d-flex align-items-center justify-content-center search-btn search-38"
+              id="searchToggle">
+        <i class="bi bi-search"></i>
+      </button>
+    </form>
+
+<!-- WHATSAPP MOBILE CON MISMO CONTORNO -->
+<div class="input-group search-38 whatsapp-mobile d-md-none">
+  <a href="https://wa.me/51999999999"
+     class="btn d-flex align-items-center justify-content-center w-100 text-success">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+</div>
+
+
+  </div>
+</div>
+
+<!-- WHATSAPP + TELÉFONO -->
+<div class="col-12 col-md-3 whatsapp-box d-none d-md-block">
+  <div class="d-flex justify-content-center align-items-center gap-3">
+    <a href="https://wa.me/51999999999" class="text-success fs-1 whatsapp-icon">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+    <span class="phone-number">
+      +51 947 158 781
+    </span>
+  </div>
+</div>
+
+
+
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <div class="container">
+
+    <!-- BOTÓN MOBILE -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- MENÚ CENTRADO -->
+    <div class="collapse navbar-collapse justify-content-center" id="menuPrincipal">
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">INICIO</a>
+        </li>
+
+        <!-- NOSOTROS -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            NOSOTROS
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">PRESENTACIÓN</a></li>
+            <li><a class="dropdown-item" href="#">MISIÓN</a></li>
+            <li><a class="dropdown-item" href="#">VISIÓN</a></li>
+          </ul>
+        </li>
+
+        <!-- SERVICIOS -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            SERVICIOS
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">RENTAL DE EQUIPOS AUDIOVISUALES</a></li>
+            <li><a class="dropdown-item" href="#">PANTALLAS LEDS</a></li>
+            <li><a class="dropdown-item" href="#">PROYECTORES</a></li>
+            <li><a class="dropdown-item" href="#">TVS</a></li>
+            <li><a class="dropdown-item" href="#">STREAMING</a></li>
+            <li><a class="dropdown-item" href="#">CABINAS DE TRADUCCIÓN</a></li>
+            <li><a class="dropdown-item" href="#">AUDIO E ILUMINACIÓN</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">GALERÍA</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">CONTACTO</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- SLIDER -->
+<div id="sliderPrincipal" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- INDICADORES -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#sliderPrincipal" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#sliderPrincipal" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#sliderPrincipal" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#sliderPrincipal" data-bs-slide-to="3"></button>
+    <button type="button" data-bs-target="#sliderPrincipal" data-bs-slide-to="4"></button>
+  </div>
+
+  <!-- IMÁGENES -->
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="imagenes\SLIDER FOTOS\RENTAL_DE_EQUIPOS_AUDIVISUALES.jpg" class="d-block w-100" alt="Slide 1">
+      
+      <div class="carousel-caption d-md-block text-white">
+        <h5>RENTAL DE EQUIPOS AUDIVISUALES</h5>
+        <p>Nos comprometemos ofrecer una calidad en tus eventos, poniendo a tu disposición nuestro servicio de alquiler de equipos audiovisuales.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="imagenes\SLIDER FOTOS\PANTALLAS_LEDS.jpg" class="d-block w-100" alt="Slide 2">
+    
+      <div class="carousel-caption d-md-block text-white">
+        <h5>PANTALLAS LEDS</h5>
+        <p>Las pantallas LED es importante para que puedan visualizar sus presentaciones (ppts), imágenes, vídeos, circuito cerrado, en ferias, shows, conferencias, etc.</p>
+      </div>
+    
+    </div>
+
+    <div class="carousel-item">
+      <img src="imagenes\SLIDER FOTOS\PROYECTORES.jpg" class="d-block w-100" alt="Slide 3">
+      
+      <div class="carousel-caption d-md-block text-white">
+        <h5>PROYECTORES</h5>
+        <p>Contamos con proyectores de diferentes capacidades, marcas y diferentes tamaños tanto de pared como de piso y se puede arrendar de acuerdo al tiempo.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="imagenes\SLIDER FOTOS\TVS.jpg" class="d-block w-100" alt="Slide 4">
+      
+      <div class="carousel-caption d-md-block text-white">
+        <h5>TVS</h5>
+        <p>Contamos con televisores LED de diferentes pulgadas como de 43", 49", 60", 65", 75 y 86", etc.</p>
+      </div>   
+    </div>
+
+    <div class="carousel-item">
+      <img src="imagenes\SLIDER FOTOS\STREAMING.jpg" class="d-block w-100" alt="Slide 5">
+
+      <div class="carousel-caption d-md-block text-white">
+        <h5>STREAMING</h5>
+        <p>Brindamos el servicio de producción audiovisual especializada en video en directo Live Streaming con conexión de internet confiable para el Video en Vivo Full HD.</p>
+      </div> 
+    </div>
+
+  </div>
+
+  <!-- CONTROLES -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#sliderPrincipal" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#sliderPrincipal" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+</div>
+
+
+
+
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const searchToggle = document.getElementById('searchToggle');
+  const searchBox = document.getElementById('searchBox');
+  const searchInput = document.getElementById('searchInput');
+
+  searchToggle.addEventListener('click', () => {
+    if (window.innerWidth < 768) {
+      searchBox.classList.toggle('active');
+      if (searchBox.classList.contains('active')) {
+        searchInput.focus();
+      }
+    }
+  });
+
+  // Cerrar al tocar fuera
+  document.addEventListener('click', (e) => {
+    if (
+      window.innerWidth < 768 &&
+      !searchBox.contains(e.target)
+    ) {
+      searchBox.classList.remove('active');
+    }
+  });
+</script>
+
+
+
+</body>
+</html>
