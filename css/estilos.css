@@ -1,0 +1,646 @@
+/* =====================================================
+   VARIABLES
+===================================================== */
+:root {
+  --primary: #a32e2e;
+  --hover-bg: rgba(255,255,255,.15);
+  --hero-font: 'Poppins', sans-serif; /* ejemplo */
+}
+
+/* =====================================================
+   RESET / BASE
+===================================================== */
+.btn,
+.btn:focus,
+.btn:active,
+.search-btn,
+.search-btn:focus,
+.search-btn:active,
+.search-btn:focus-visible,
+.form-control,
+.form-control:focus,
+.search-input,
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+.site-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+header { padding: 20px 0; }
+header .row { margin-left: 0; margin-right: 0; }
+
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+header .logo img {
+  max-height: 60px;
+  object-fit: contain;
+}
+
+/* =====================================================
+   BUSCADOR
+===================================================== */
+.search-38 { height: 38px; }
+
+.input-group {
+  border: 1px solid silver;
+  border-radius: 8px;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+  z-index: 999;
+  display: none;
+  overflow: hidden;
+}
+
+.search-results a {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+}
+
+.search-results a:hover {
+  background: #f5f5f5;
+  color: var(--primary);
+}
+
+.search-results .no-results {
+  padding: 12px 14px;
+  color: #777;
+  font-size: .9rem;
+  text-align: center;
+  font-style: italic;
+}
+
+/* =====================================================
+   TELÉFONO / WHATSAPP
+===================================================== */
+.phone-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+}
+
+.phone-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0d3b66;
+  white-space: nowrap;
+}
+
+.phone-label {
+  font-size: .9rem;
+  font-weight: 600;
+  color: #28a745;
+  text-transform: uppercase;
+  animation: pulseText 1.5s infinite;
+}
+
+@keyframes pulseText { 50% { opacity: .6; } }
+
+.whatsapp-mobile {
+  width: 38px;
+  border: 1px solid silver;
+  border-radius: 6px;
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+.navbar-custom { background-color: var(--primary); }
+
+.navbar-custom .nav-link,
+.navbar-custom .dropdown-item {
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 6px 16px;
+}
+
+.navbar-custom .nav-item { margin: 0 8px; }
+.navbar-custom .nav-item:hover {
+  background-color: var(--hover-bg);
+  border-radius: 6px;
+}
+
+.navbar-toggler-icon { filter: invert(1); }
+
+.dropdown-arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 0 6px;
+  margin-left: -10px;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-arrow i {
+  font-size: .82rem;
+  transition: transform .3s ease;
+}
+
+.dropdown-arrow.active i { transform: rotate(180deg); }
+
+.dropdown-menu {
+  background-color: var(--primary);
+  border: none;
+}
+
+.dropdown-item:hover {
+  background-color: var(--hover-bg);
+}
+
+/* Alinear texto + flecha en desktop */
+.dropdown-header-row {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+
+  .dropdown-header-row {
+    gap: 4px; /* reduce espacio entre texto y flecha */
+  }
+
+  .dropdown-arrow {
+    margin-left: -18px; /* más pegado */
+    padding: 0 4px;
+  }
+
+}
+
+/* ===============================
+   DROPDOWN HOVER DESKTOP
+================================ */
+@media (min-width: 992px) {
+
+  .nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+
+  .nav-item.dropdown .dropdown-menu {
+    display: none;
+  }
+
+}
+
+/* =====================================================
+   BREADCRUMB
+===================================================== */
+.breadcrumb-wrapper {
+  background: #f8f9fa;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 10px 0;
+}
+
+.breadcrumb {
+  background: transparent;
+  font-size: 14px;
+}
+
+.breadcrumb a {
+  color: var(--primary);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover { text-decoration: underline; }
+
+.breadcrumb-item.active { color: #6c757d; }
+
+/* Breadcrumb - espacio lateral en móvil */
+@media (max-width: 767.98px) {
+  section .site-container,
+  .breadcrumb-wrapper .site-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* =====================================================
+   SLIDER PRINCIPAL
+===================================================== */
+.carousel-item img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.carousel-caption * {
+  text-shadow: 2px 2px 6px rgba(0,0,0,.7);
+}
+
+.carousel-caption {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.carousel-caption h5 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.carousel-caption p {
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+/* =====================================================
+   SERVICIOS DESTACADOS
+===================================================== */
+.services-wrapper {
+  max-width: 1320px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.services-scroll {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 258px;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+.services-scroll::-webkit-scrollbar { display: none; }
+
+.service-item { width: 260px; }
+
+.service-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: .35s ease;
+}
+
+.service-card img {
+  height: 180px;
+  object-fit: cover;
+  transition: .45s ease;
+}
+
+.service-item:hover img { transform: scale(1.12); }
+.service-item:hover .service-card {
+  box-shadow: 0 18px 40px rgba(0,0,0,.35);
+}
+
+.scroll-arrow {
+  position: absolute;
+  top: 58%;
+  transform: translateY(-50%);
+  width: clamp(34px, 4vw, 46px);
+  height: clamp(34px, 4vw, 46px);
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+/* ===============================
+   BOTÓN VER MÁS – SERVICIOS
+================================ */
+.btn-servicio {
+  background-color: #0d3b66;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 18px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  transition: all .3s ease;
+}
+
+.btn-servicio:hover {
+  background-color: #092a4a;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,.25);
+}
+
+/* =====================================================
+   ANIMACIONES
+===================================================== */
+.beneficio-anim,
+.cotizacion-anim {
+  opacity: 0;
+  transition: .9s ease;
+}
+
+.beneficio-anim { transform: translateY(30px); }
+.cotizacion-anim { transform: translateX(-80px); }
+
+.show { opacity: 1; transform: none; }
+
+/* =====================================================
+   SOLICITA TU COTIZACIÓN
+===================================================== */
+.cotizacion-img {
+  max-width: 84%;   /* 👈 reduce el tamaño */
+  height: auto;
+}
+
+/* ===============================
+   MARCAS
+================================ */
+.brand-logo {
+  max-height: 90px;
+  opacity: .75;
+  filter: grayscale(100%);
+  transition: all .35s ease;
+}
+
+.brand-logo:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* ===============================
+   SLIDER DE MARCAS
+================================ */
+/* CONTENEDOR */
+.brands-slider {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.brands-track {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  width: max-content;              /* 👈 CLAVE */
+  animation: scrollBrands 18s linear infinite;
+}
+
+.brands-track img {
+  max-height: 95px;
+  width: auto;
+  flex-shrink: 0;                  /* 👈 CLAVE */
+  filter: grayscale(100%);
+  opacity: .75;
+  transition: transform .3s ease, filter .3s ease, opacity .3s ease;
+}
+
+.brands-track img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+/* Animación continua REAL */
+@keyframes scrollBrands {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* =====================================================
+   MAPA
+===================================================== */
+.mapa-anim {
+  opacity: 0;
+  transform: scale(.92);
+  transition: .9s ease;
+}
+
+.mapa-anim.show-map { opacity: 1; transform: scale(1); }
+
+/* =====================================================
+   WHATSAPP FLOTANTE
+===================================================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,.35);
+}
+
+/* =====================================================
+   MOBILE (≤ 767px)
+===================================================== */
+@media (max-width: 767px) {
+
+  /* HEADER */
+  header { padding: 28px 0 16px; }
+  header .logo { justify-content: center; }
+  .phone-number { display: none; }
+
+  /* Buscador */
+  .search-box .search-input {
+    display: none;
+  }
+
+  .search-box.active .search-input {
+    display: block;
+  }
+
+  header .col-12.col-md.d-flex {
+    padding-top: 8px;
+    padding-bottom: 6px;
+  }
+
+  /* Breadcrumb + secciones */
+  section .site-container,
+  .breadcrumb-wrapper .site-container,
+  .footer .site-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Slider */
+  .carousel-item img {
+    height: auto;
+    max-height: 260px;
+    object-fit: contain;
+  }
+
+  .carousel-caption {
+    bottom: 12%;
+    padding: 0 10px;
+  }
+
+  .carousel-caption h5 { font-size: 1.25rem; }
+  .carousel-caption p { font-size: .9rem; }
+
+  /* Servicios destacados */
+  .scroll-arrow {
+    width: 36px;
+    height: 36px;
+    top: 58%;
+    z-index: 5;
+  }
+
+  .scroll-left { left: 6px; }
+  .scroll-right { right: 6px; }
+
+  .services-wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .services-scroll {
+    padding: 10px 0;
+  }
+
+  /* Cotización */
+  .cotizacion-img {
+    max-width: 100%;
+  }
+
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+.footer {
+  background: #1f1f1f;
+  color: #e0e0e0;
+}
+
+.footer-link { color: inherit; text-decoration: none; }
+.footer-link:hover { color: var(--primary); }
+
+.footer-social a {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #2b2b2b;
+  color: #fff;
+}
+
+.footer-social a:hover {
+  background: var(--primary);
+  transform: translateY(-4px);
+}
+
+.footer-logo { max-width: 180px; }
+
+/* TABLET */
+@media (min-width: 768px) {
+  header .logo {
+    flex: 0 0 310px;
+    max-width: 310px;
+  }
+}
+
+/* BASE – visible siempre */
+.scroll-left {
+  left: 14px;
+}
+
+.scroll-right {
+  right: 14px;
+}
+
+/* DESKTOP */
+@media (min-width: 1200px) {
+  .scroll-left {
+    left: -64px;
+  }
+
+  .scroll-right {
+    right: -64px;
+  }
+}
+
+.footer-hours {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-subtitle,
+.carousel-caption p {
+  font-family: var(--hero-font);
+}
+
+/* ===============================
+   FOOTER – TIPOGRAFÍA UNIFICADA
+================================ */
+
+/* Base del contenido del footer */
+.footer,
+.footer p,
+.footer li,
+.footer a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* Títulos del footer (Contacto, Horario, etc.) */
+.footer h5,
+.footer h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Horario de atención */
+.footer-hours li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+/* Negrita solo para el día */
+.footer-hours strong {
+  font-weight: 600;
+  color: #fff;
+}
+

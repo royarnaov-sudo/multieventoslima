@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MULTIEVENTOSLIMA</title>
+  <meta name="author" content="MULTIEVENTOSLIMA">
+  <meta name="description" content="MULTIEVENTOSLIMA">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="imagenes/favicon/favicon-32.png" type="image/png">
+  <link rel="icon" type="image/png" sizes="32x32" href="imagenes/favicon/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="imagenes/favicon/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="imagenes/favicon/apple-touch-icon.png">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="site-container">
+    <div class="row align-items-center gx-4 gy-0">
+
+      <!-- LOGO -->
+      <div class="col-12 col-md-3 logo ps-0">
+        <a href="index.html">
+          <img
+            src="logo-multieventos.png"
+            alt="Logo"
+            class="img-fluid d-block"
+          >
+        </a>
+      </div>
+
+      <!-- BUSCADOR + WHATSAPP (MOBILE) -->
+      <div class="col-12 col-md d-flex justify-content-center">
+        <div class="d-flex align-items-center gap-2">
+
+          <!-- BUSCADOR -->
+          <form
+            id="searchBox"
+            class="input-group search-box"
+            style="max-width: 270px;"
+          >
+            <input
+              id="searchInput"
+              type="text"
+              class="form-control search-input search-38"
+              placeholder="Buscar..."
+            >
+
+            <div id="searchResults" class="search-results"></div>
+
+           <button id="searchToggle" type="button"
+            class="btn d-flex align-items-center justify-content-center search-btn search-38"
+            >
+
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+
+          <!-- WHATSAPP MOBILE -->
+          <div class="search-38 whatsapp-mobile d-md-none">
+            <a
+              href="https://wa.me/51999999999"
+              class="btn d-flex align-items-center justify-content-center w-100 text-success"
+            >
+              <i class="bi bi-whatsapp"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- WHATSAPP + TELÉFONO (DESKTOP) -->
+      <div class="col-12 col-md-auto d-none d-md-block px-0 ms-auto">
+        <div class="d-flex justify-content-end align-items-center gap-2 text-end">
+
+          <a
+            href="https://wa.me/51947158781"
+            class="text-success fs-1 whatsapp-icon"
+          >
+            <i class="bi bi-whatsapp"></i>
+          </a>
+
+          <div class="phone-wrapper text-start">
+            <span class="phone-label">Atención inmediata</span>
+            <a href="https://wa.me/51947158781" class="phone-number text-decoration-none">
+            +51 947 158 781
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</header>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <div class="container-fluid site-container d-flex align-items-center">
+
+    <!-- BOTÓN MOBILE -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menuPrincipal">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    <!-- MENÚ -->
+    <div id="menuPrincipal" class="collapse navbar-collapse justify-content-lg-center">
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">INICIO</a>
+        </li>
+
+        <!-- NOSOTROS -->
+<li class="nav-item dropdown">
+
+  <div class="dropdown-header-row">
+    <a class="nav-link" href="nosotros.html">NOSOTROS</a>
+
+    <button class="dropdown-arrow" type="button" aria-label="Abrir submenú">
+      <i class="bi bi-chevron-down"></i>
+    </button>
+  </div>
+
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="presentacion.html">PRESENTACIÓN</a></li>
+    <li><a class="dropdown-item" href="vision-mision.html">VISIÓN Y MISIÓN</a></li>
+  </ul>
+
+</li>
+
+        <!-- SERVICIOS -->
+<li class="nav-item dropdown">
+
+  <div class="dropdown-header-row">
+    <a class="nav-link" href="servicios.html">SERVICIOS</a>
+
+    <button class="dropdown-arrow" type="button" aria-label="Abrir submenú">
+      <i class="bi bi-chevron-down"></i>
+    </button>
+  </div>
+
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="rental-audiovisual.html">RENTAL DE EQUIPOS AUDIOVISUALES</a></li>
+    <li><a class="dropdown-item" href="pantallas-leds.html">PANTALLAS LEDS</a></li>
+    <li><a class="dropdown-item" href="proyectores.html">PROYECTORES</a></li>
+    <li><a class="dropdown-item" href="tvs.html">TVS</a></li>
+    <li><a class="dropdown-item" href="streaming.html">STREAMING</a></li>
+    <li><a class="dropdown-item" href="cabinas-traduccion.html">CABINAS DE TRADUCCIÓN</a></li>
+    <li><a class="dropdown-item" href="audio-iluminacion.html">AUDIO E ILUMINACIÓN</a></li>
+  </ul>
+
+</li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">GALERÍA</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">CONTACTO</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- SLIDER -->
+<div id="sliderPrincipal" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
+
+  <!-- INDICADORES -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#sliderPrincipal" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#sliderPrincipal" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#sliderPrincipal" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#sliderPrincipal" data-bs-slide-to="3"></button>
+    <button type="button" data-bs-target="#sliderPrincipal" data-bs-slide-to="4"></button>
+  </div>
+
+  <!-- IMÁGENES -->
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="imagenes/slider-fotos/rental-de-equipos-audivisuales.jpg"
+           class="d-block w-100"
+           alt="Slide 1">
+
+      <div class="carousel-caption d-md-block text-white">
+        <h5>RENTAL DE EQUIPOS AUDIOVISUALES</h5>
+        <p>
+          Nos comprometemos ofrecer una calidad en tus eventos, poniendo a tu
+          disposición nuestro servicio de alquiler de equipos audiovisuales.
+        </p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="imagenes/slider-fotos/pantallas-leds.jpg"
+           class="d-block w-100"
+           alt="Slide 2">
+
+      <div class="carousel-caption d-md-block text-white">
+        <h5>PANTALLAS LEDS</h5>
+        <p>
+          Las pantallas LED es importante para que puedan visualizar sus
+          presentaciones (ppts), imágenes, vídeos, circuito cerrado, en ferias,
+          shows y conferencias.
+        </p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="imagenes/slider-fotos/proyectores.jpg"
+           class="d-block w-100"
+           alt="Slide 3">
+
+      <div class="carousel-caption d-md-block text-white">
+        <h5>PROYECTORES</h5>
+        <p>
+          Contamos con proyectores de diferentes capacidades, marcas y tamaños,
+          tanto de pared como de piso.
+        </p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="imagenes/slider-fotos/tvs.jpg"
+           class="d-block w-100"
+           alt="Slide 4">
+
+      <div class="carousel-caption d-md-block text-white">
+        <h5>TVS</h5>
+        <p>
+          Contamos con televisores LED de diferentes pulgadas: 43", 49", 60",
+          65", 75" y 86".
+        </p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="imagenes/slider-fotos/streaming.jpg"
+           class="d-block w-100"
+           alt="Slide 5">
+
+      <div class="carousel-caption d-md-block text-white">
+        <h5>STREAMING</h5>
+        <p>
+          Servicio de producción audiovisual en vivo con conexión de internet
+          confiable para Video Full HD.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CONTROLES -->
+  <button class="carousel-control-prev"
+          type="button"
+          data-bs-target="#sliderPrincipal"
+          data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next"
+          type="button"
+          data-bs-target="#sliderPrincipal"
+          data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+</div>
+
+<!-- SECCIÓN SERVICIOS DESTACADOS -->
+<section class="py-5 bg-light">
+  <div class="site-container services-wrapper">
+
+    <!-- TÍTULO -->
+    <div class="text-center mb-4">
+      <h2 class="fw-bold text-uppercase" style="color:#a32e2e;">
+        Servicios Destacados
+      </h2>
+      <div style="width:80px;height:4px;background:#a32e2e;margin:10px auto 0;"></div>
+    </div>
+
+    <!-- FLECHA IZQUIERDA -->
+    <button class="scroll-arrow scroll-left" id="scrollLeft">
+      <i class="bi bi-chevron-left"></i>
+    </button>
+
+    <!-- CONTENEDOR SCROLL -->
+    <div class="services-scroll" id="servicesScroll">
+
+      <!-- ITEM 1-->
+      <div class="service-item">
+        <a href="rental-audiovisual.html" class="text-decoration-none text-dark">
+          <div class="card h-100 shadow-sm service-card">
+            <img src="imagenes/servicios/pequenas/rental-de-equipos-audiovisuales.jpg"
+                 class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="fw-bold">RENTAL AUDIOVISUAL</h5>
+              <p>Nos comprometemos ofrecer una calidad en tus eventos...</p>
+              <a href="rental-audiovisual.html" class="btn btn-sm btn-servicio mt-2">
+                Ver más
+              </a>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- ITEM 2-->
+       <div class="service-item">
+        <a href="rental-audiovisual.html" class="text-decoration-none text-dark">
+          <div class="card h-100 shadow-sm service-card">
+            <img src="imagenes/servicios/pequenas/pantallas-leds.jpg"
+                 class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="fw-bold">PANTALLAS LEDS</h5>
+              <p>Las pantallas LED es importante para que puedan visualizar...</p>
+                  <a href="rental-audiovisual.html" class="btn btn-sm btn-servicio mt-2">
+                Ver más
+              </a>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- ITEM 3-->
+       <div class="service-item">
+        <a href="rental-audiovisual.html" class="text-decoration-none text-dark">
+          <div class="card h-100 shadow-sm service-card">
+            <img src="imagenes/servicios/pequenas/proyectores.jpg"
+                 class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="fw-bold">PROYECTORES</h5>
+              <p>Contamos con proyectores de diferentes capacidades...</p>
+                  <a href="rental-audiovisual.html" class="btn btn-sm btn-servicio mt-2">
+                Ver más
+              </a>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- ITEM 4-->
+      <div class="service-item">
+        <a href="tvs.html" class="text-decoration-none text-dark">
+          <div class="card h-100 shadow-sm service-card">
+            <img src="imagenes/servicios/pequenas/tvs.jpg" alt="Alquiler de televisores LED para eventos" class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="fw-bold">TVS</h5>
+              <p>Contamos con televisores LED de diferentes pulgadas...</p>
+                  <a href="rental-audiovisual.html" class="btn btn-sm btn-servicio mt-2">
+                Ver más
+              </a>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- ITEM 5-->
+      <div class="service-item">
+        <a href="streaming.html" class="text-decoration-none text-dark">
+          <div class="card h-100 shadow-sm service-card">
+            <img src="imagenes/servicios/pequenas/streaming.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="fw-bold">STREAMING</h5>
+              <p>Brindamos el servicio de producción audiovisual...</p>
+                  <a href="rental-audiovisual.html" class="btn btn-sm btn-servicio mt-2">
+                Ver más
+              </a>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- ITEM 6-->
+      <div class="service-item">
+        <a href="audio.html" class="text-decoration-none text-dark">
+          <div class="card h-100 shadow-sm service-card">
+            <img src="imagenes/servicios/pequenas/cabinas-de-traduccion.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="fw-bold">CABINAS TRADUCCIÓN</h5>
+              <p>Brindamos el servicio de cabinas de traducción...</p>
+                  <a href="rental-audiovisual.html" class="btn btn-sm btn-servicio mt-2">
+                Ver más
+              </a>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- ITEM 7-->
+      <div class="service-item">
+        <a href="iluminacion.html" class="text-decoration-none text-dark">
+          <div class="card h-100 shadow-sm service-card">
+            <img src="imagenes/servicios/pequenas/audio-e-iluminacion.jpg" class="card-img-top">
+            <div class="card-body text-center">
+              <h5 class="fw-bold">AUDIO E ILUMINACIÓN</h5>
+              <p>Brindamos el servicio de audio e iluminación...</p>
+                  <a href="rental-audiovisual.html" class="btn btn-sm btn-servicio mt-2">
+                Ver más
+              </a>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+   <!-- FLECHA DERECHA -->
+    <button class="scroll-arrow scroll-right" id="scrollRight">
+      <i class="bi bi-chevron-right"></i>
+    </button>
+
+  </div>
+
+</section>
+
+<!-- BENEFICIOS -->
+<section class="py-5">
+  <div class="site-container">
+
+    <div class="row text-center gx-4 gy-4">
+
+      <!-- Entrega a domicilio -->
+      <div class="col-12 col-md-4 beneficio-anim">
+        <div class="card servicio-card h-100 shadow-sm">
+          <div class="p-4">
+            <i class="bi bi-truck fs-1 mb-3" style="color:#a32e2e;"></i>
+            <h5 class="fw-bold text-uppercase">Entrega a domicilio</h5>
+            <p class="mb-0">
+            Llevamos los equipos directamente a tu evento.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reserva online -->
+      <div class="col-12 col-md-4 beneficio-anim">
+        <div class="card servicio-card h-100 shadow-sm">
+          <div class="p-4">
+          <i class="bi bi-truck fs-1 mb-3" style="color:#a32e2e;"></i>
+          <h5 class="fw-bold text-uppercase">Reserva online 24/7</h5>
+          <p class="mb-0">
+          Reserva nuestros servicios en cualquier momento, sin horarios ni complicaciones.
+          </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Asesoría -->
+               <div class="col-12 col-md-4 beneficio-anim">
+      <div class="card servicio-card h-100 shadow-sm">
+        <div class="p-4">
+          <i class="bi bi-truck fs-1 mb-3" style="color:#a32e2e;"></i>
+          <h5 class="fw-bold text-uppercase">Asesoría personalizada</h5>
+          <p class="mb-0">
+          Te ayudamos a elegir la mejor solución audiovisual para tu evento.
+          </p>
+          </div>
+        </div>  
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SOLICITA TU COTIZACIÓN -->
+<section class="py-5">
+  <div class="site-container">
+
+    <!-- TÍTULO IGUAL A LOS ANTERIORES -->
+    <div class="text-center mb-4">
+      <h2 class="fw-bold text-uppercase" style="color:#a32e2e;">
+        Solicita tu cotización
+      </h2>
+      <div style="width:80px;height:4px;background:#a32e2e;margin:10px auto 0;"></div>
+    </div>
+
+    <div class="row align-items-center g-4">
+
+      <!-- IMAGEN -->
+      <div class="col-12 col-md-6 text-center">
+       <img src="imagenes/cotizacion.jpg"
+     alt="Solicita tu cotización"
+     class="img-fluid rounded shadow cotizacion-img cotizacion-anim">
+      </div>
+
+      <!-- TEXTO + BOTÓN -->
+      <div class="col-12 col-md-6">
+        <h4 class="fw-bold mb-3">
+          Cotiza tu evento con nosotros
+        </h4>
+        <p>
+          Cuéntanos qué tipo de evento estás organizando y te brindaremos
+          una propuesta personalizada con los mejores equipos audiovisuales.
+        </p>
+
+        <a href="https://wa.me/51947158781"
+           class="btn btn-lg text-white mt-3"
+           style="background-color:#a32e2e;">
+          <i class="bi bi-whatsapp me-2"></i>
+          Solicitar cotización
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- MARCAS QUE CONFÍAN EN NOSOTROS -->
+<section class="py-5 bg-light">
+  <div class="site-container">
+
+    <!-- TÍTULO -->
+    <div class="text-center mb-4">
+      <h2 class="fw-bold text-uppercase" style="color:#a32e2e;">
+        Marcas que confían en nosotros
+      </h2>
+      <div style="width:80px;height:4px;background:#a32e2e;margin:10px auto 0;"></div>
+    </div>
+
+    <!-- SLIDER MARCAS -->
+    <div class="brands-slider">
+      <div class="brands-track">
+
+        <!-- Logos (se repiten para loop infinito) -->
+        <img src="imagenes/marcas/marca1.png" alt="Marca 1">
+        <img src="imagenes/marcas/marca2.png" alt="Marca 2">
+        <img src="imagenes/marcas/marca3.png" alt="Marca 3">
+        <img src="imagenes/marcas/marca4.png" alt="Marca 4">
+        <img src="imagenes/marcas/marca5.png" alt="Marca 5">
+
+        <!-- DUPLICADO -->
+        <img src="imagenes/marcas/marca1.png" alt="">
+        <img src="imagenes/marcas/marca2.png" alt="">
+        <img src="imagenes/marcas/marca3.png" alt="">
+        <img src="imagenes/marcas/marca4.png" alt="">
+        <img src="imagenes/marcas/marca5.png" alt="">
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MAPA - CHORRILLOS -->
+<section class="py-5 bg-light">
+  <div class="site-container">
+
+    <!-- TÍTULO IGUAL A SERVICIOS DESTACADOS -->
+    <div class="text-center mb-4">
+      <h2 class="fw-bold text-uppercase" style="color:#a32e2e;">
+        Ubícanos en Chorrillos
+      </h2>
+      <div style="width:80px;height:4px;background:#a32e2e;margin:10px auto 0;"></div>
+    </div>
+
+    <!-- MAPA -->
+<div class="mapa mapa-anim">
+  <iframe
+    src="https://www.google.com/maps?q=Chorrillos,+Lima,+Perú&output=embed"
+    width="100%"
+    height="350"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+  </div>
+</section>
+
+
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/51947158781"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+<!-- FOOTER -->
+<footer class="footer py-5">
+  <div class="site-container">
+
+<div class="row gy-4 align-items-start">
+
+  <div class="col-12 col-md-3">
+    <img src="logo-multieventos-pie.png" alt="MULTIEVENTOSLIMA" class="footer-logo">
+
+    <p class="mt-3">
+      Especialistas en alquiler de equipos audiovisuales para todo tipo de eventos.
+      Calidad, puntualidad y asesoría personalizada.
+    </p>
+  </div>
+
+  <div class="col-12 col-md-3">
+    <h5 class="fw-bold">Horario de atención</h5>
+      <ul class="footer-hours">
+        <li>
+          <i class="bi bi-clock"></i>
+            <div>
+              <strong>Lunes a Domingos</strong><br>
+              <span class="footer-hours-note">Atención con previa coordinación</span>
+            </div>
+        </li>
+      </ul>
+  </div>
+
+  <div class="col-12 col-md-3">
+    <h5 class="fw-bold">Servicios</h5>
+    <ul class="list-unstyled">
+      <li><a href="#" class="footer-link">Rental Audiovisual</a></li>
+      <li><a href="#" class="footer-link">Pantallas LED</a></li>
+      <li><a href="#" class="footer-link">Proyectores</a></li>
+      <li><a href="#" class="footer-link">TVs</a></li>
+      <li><a href="#" class="footer-link">Streaming</a></li>
+      <li><a href="#" class="footer-link">Cabinas de Traducción</a></li>
+      <li><a href="#" class="footer-link">Audio e Iluminación</a></li>
+    </ul>
+  </div>
+
+  <div class="col-12 col-md-3">
+    <h5 class="fw-bold">Contacto</h5>
+    <p><i class="bi bi-geo-alt me-2"></i>Chorrillos, Lima – Perú</p>
+    <p>
+      <i class="bi bi-whatsapp me-2"></i>
+      <a href="https://wa.me/51947158781" class="footer-link">
+        +51 947 158 781
+      </a>
+    </p>
+    <p class="footer-contact-item mb-2">
+  <i class="bi bi-envelope mt-1"></i>
+  <span class="footer-email">contacto@multieventoslima.com</span>
+</p>
+
+    <div class="footer-social d-flex gap-3 mt-2">
+      <a href="#"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-instagram"></i></a>
+      <a href="#"><i class="bi bi-youtube"></i></a>
+      <a href="#"><i class="bi bi-tiktok"></i></a>
+    </div>
+  </div>
+
+</div>
+
+    <hr class="my-4">
+
+    <!-- COPYRIGHT -->
+    <div class="text-center">
+      <small>
+        © <span id="year"></span> MULTIEVENTOSLIMA. Todos los derechos reservados.
+      </small>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  document.querySelectorAll('.dropdown-arrow').forEach(arrow => {
+    arrow.addEventListener('click', e => {
+      if (window.innerWidth <= 991) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const menu = arrow.closest('.dropdown').querySelector('.dropdown-menu');
+
+        document.querySelectorAll('.dropdown-menu.show')
+          .forEach(m => m !== menu && m.classList.remove('show'));
+
+        menu.classList.toggle('show');
+      }
+    });
+  });
+
+});
+</script>
+
+<script>
+const slider = document.getElementById('servicesScroll');
+
+/* Flechas */
+document.getElementById('scrollLeft').onclick = () =>
+  slider.scrollBy({ left: -300, behavior: 'smooth' });
+
+document.getElementById('scrollRight').onclick = () =>
+  slider.scrollBy({ left: 300, behavior: 'smooth' });
+
+/* Drag (desktop) */
+let isDown = false, startX, scrollStart;
+
+slider.addEventListener('mousedown', e => {
+  isDown = true;
+  startX = e.pageX;
+  scrollStart = slider.scrollLeft;
+});
+
+['mouseup', 'mouseleave'].forEach(ev =>
+  slider.addEventListener(ev, () => isDown = false)
+);
+
+slider.addEventListener('mousemove', e => {
+  if (!isDown) return;
+  slider.scrollLeft = scrollStart - (e.pageX - startX) * 1.3;
+});
+
+/* Swipe (móvil) */
+let touchX = 0, touchScroll = 0;
+
+slider.addEventListener('touchstart', e => {
+  touchX = e.touches[0].pageX;
+  touchScroll = slider.scrollLeft;
+});
+
+slider.addEventListener('touchmove', e => {
+  slider.scrollLeft = touchScroll - (e.touches[0].pageX - touchX) * 1.3;
+});
+</script>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+
+    if (entry.intersectionRatio > 0.55) {
+      entry.target.classList.add('show');
+    }
+
+    if (entry.intersectionRatio < 0.25) {
+      entry.target.classList.remove('show');
+    }
+
+  });
+}, {
+  threshold: [0, 0.25, 0.55, 1]
+});
+
+document
+  .querySelectorAll('.beneficio-anim, .cotizacion-anim')
+  .forEach(el => observer.observe(el));
+
+</script>
+
+<script>
+window.addEventListener('pageshow', function () {
+  const input = document.getElementById('searchInput');
+  const results = document.getElementById('searchResults');
+  const form = document.getElementById('searchBox');
+
+  if (input) input.value = '';
+  if (results) results.style.display = 'none';
+  if (form) form.classList.remove('active');
+});
+</script>
+
+<script>
+const mapaObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+
+    if (entry.intersectionRatio > 0.6) {
+      entry.target.classList.add('show-map');
+    }
+
+    if (entry.intersectionRatio < 0.3) {
+      entry.target.classList.remove('show-map');
+    }
+
+  });
+}, {
+  threshold: [0, 0.3, 0.6, 1]
+});
+
+document
+  .querySelectorAll('.mapa-anim')
+  .forEach(el => mapaObserver.observe(el));
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  const form = document.getElementById('searchBox');
+  const input = document.getElementById('searchInput');
+  const resultsBox = document.getElementById('searchResults');
+  const toggle = document.getElementById('searchToggle');
+
+  const services = document.querySelectorAll(
+    '.nav-item.dropdown a.dropdown-item'
+  );
+
+  function normalize(text) {
+    return text
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+  }
+
+  function showNoResults() {
+    resultsBox.innerHTML = `
+      <div class="no-results">
+        No se han encontrado resultados
+      </div>
+    `;
+    resultsBox.style.display = 'block';
+  }
+
+  function searchAndRedirect() {
+    const value = normalize(input.value.trim());
+    if (!value) return;
+
+    const match = Array.from(services).find(service =>
+      normalize(service.textContent).includes(value)
+    );
+
+    if (match) {
+      window.location.href = match.href;
+    } else {
+      window.location.href = "sin-resultados.html";
+    }
+  }
+
+  /* 🔍 Resultados en vivo */
+  input.addEventListener('input', () => {
+    const value = normalize(input.value.trim());
+    resultsBox.innerHTML = '';
+
+    if (!value) {
+      resultsBox.style.display = 'none';
+      return;
+    }
+
+    const matches = Array.from(services).filter(service =>
+      normalize(service.textContent).includes(value)
+    );
+
+    if (!matches.length) {
+      form.classList.add('active');
+      showNoResults();
+      return;
+    }
+
+    matches.forEach(service => {
+      const link = document.createElement('a');
+      link.href = service.href;
+      link.textContent = service.textContent;
+      resultsBox.appendChild(link);
+    });
+
+    resultsBox.style.display = 'block';
+  });
+
+  /* 🔘 Click en lupa */
+  toggle.addEventListener('click', e => {
+    e.preventDefault();
+
+    if (window.innerWidth < 768) {
+      if (!form.classList.contains('active')) {
+        form.classList.add('active');
+        input.focus();
+        return;
+      }
+    }
+
+    searchAndRedirect();
+  });
+
+  /* ⌨️ ENTER */
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    searchAndRedirect();
+  });
+
+  /* ❌ Cerrar resultados */
+  document.addEventListener('click', e => {
+    if (
+      window.innerWidth < 768 &&
+      !form.contains(e.target) &&
+      !toggle.contains(e.target)
+    ) {
+      resultsBox.style.display = 'none';
+    }
+  });
+
+});
+</script>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
